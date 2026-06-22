@@ -33,19 +33,19 @@ h1{
 }
 
 .contenedor{
-    max-width:1100px;
+    max-width:1300px;
     margin:auto;
     padding:50px 20px;
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
 }
 
 .tarjeta{
     background:white;
     border:8px solid #2e7d32;
     border-radius:35px;
-    padding:40px;
+    padding:35px;
     text-align:center;
     box-shadow:0 6px 18px rgba(0,0,0,0.15);
     transition:all 0.3s ease;
@@ -58,12 +58,12 @@ h1{
 
 .tarjeta h2{
     color:#2e7d32;
-    font-size:36px;
+    font-size:30px;
     margin-bottom:20px;
 }
 
 .tarjeta p{
-    font-size:20px;
+    font-size:19px;
     line-height:1.5;
     color:#444;
 }
@@ -92,7 +92,7 @@ footer{
     border-top:1px solid #ddd;
 }
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
     .contenedor{
         grid-template-columns:1fr;
@@ -131,9 +131,22 @@ Explora cómo cambian los índices de Shannon y Simpson al modificar la abundanc
 
 <a class="boton"
 href="https://jleichtle-prof.github.io/laboratorio-diversidad/">
-
 Ingresar
+</a>
 
+</div>
+
+<div class="tarjeta">
+
+<h2>🔄 Diversidad beta</h2>
+
+<p>
+Compara dos comunidades mediante el índice de Jaccard y analiza la similitud entre localidades.
+</p>
+
+<a class="boton"
+href="https://jleichtle-prof.github.io/simulador-jaccard/">
+Ingresar
 </a>
 
 </div>
@@ -148,9 +161,7 @@ Analiza la riqueza de especies a nivel local y regional utilizando diversidad al
 
 <a class="boton"
 href="https://jleichtle-prof.github.io/riqueza-alfa-beta-gamma/">
-
 Ingresar
-
 </a>
 
 </div>
