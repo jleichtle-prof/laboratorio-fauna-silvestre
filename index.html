@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laboratorio de Fauna Silvestre</title>
-
+ 
 <style>
-
 body{
     font-family: Arial, sans-serif;
     background: linear-gradient(180deg,#eef6ee,#f7faf7);
@@ -14,33 +13,34 @@ body{
     padding:0;
     color:#1a1a1a;
 }
-
+ 
 header{
     text-align:center;
     padding:40px 20px;
     background:#f3f8f3;
 }
-
+ 
 h1{
     color:#1b6e2b;
     font-size:48px;
     margin-bottom:10px;
 }
-
+ 
 .subtitulo{
     font-size:22px;
     color:#444;
 }
-
+ 
 .contenedor{
     max-width:1300px;
     margin:auto;
     padding:50px 20px;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    /* Ajustado para acomodar dinámicamente las 4 tarjetas de manera uniforme */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap:30px;
 }
-
+ 
 .tarjeta{
     background:white;
     border:8px solid #2e7d32;
@@ -49,25 +49,29 @@ h1{
     text-align:center;
     box-shadow:0 6px 18px rgba(0,0,0,0.15);
     transition:all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
+ 
 .tarjeta:hover{
     transform:translateY(-8px);
     box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
-
+ 
 .tarjeta h2{
     color:#2e7d32;
     font-size:30px;
     margin-bottom:20px;
 }
-
+ 
 .tarjeta p{
     font-size:19px;
     line-height:1.5;
     color:#444;
+    flex-grow: 1; /* Hace que los textos cortos se alineen uniformemente */
 }
-
+ 
 .boton{
     display:inline-block;
     margin-top:25px;
@@ -79,11 +83,11 @@ h1{
     font-size:20px;
     font-weight:bold;
 }
-
+ 
 .boton:hover{
     background:#0d47a1;
 }
-
+ 
 footer{
     text-align:center;
     margin-top:50px;
@@ -91,88 +95,56 @@ footer{
     color:#666;
     border-top:1px solid #ddd;
 }
-
+ 
 @media(max-width:1000px){
-
     .contenedor{
         grid-template-columns:1fr;
     }
-
     h1{
         font-size:36px;
     }
-
 }
-
 </style>
 </head>
-
+ 
 <body>
-
+ 
 <header>
-
-<h1>🐾 Simulador de monitoreo de fauna silvestre</h1>
-
-<div class="subtitulo">
-Plataforma educativa para el estudio de biodiversidad
-</div>
-
+    <h1>🐾 Simulador de monitoreo de fauna silvestre</h1>
+    <div class="subtitulo">Plataforma educativa para el estudio de biodiversidad</div>
 </header>
-
+ 
 <div class="contenedor">
+ 
+    <div class="tarjeta">
+        <h2>🦊 Diversidad alfa (local)</h2>
+        <p>Explora cómo cambian los índices de Shannon y Simpson al modificar la abundancia de las especies.</p>
+        <a class="boton" href="https://jleichtle-prof.github.io/laboratorio-diversidad/">Ingresar</a>
+    </div>
+     
+    <div class="tarjeta">
+        <h2>🔄 Diversidad beta</h2>
+        <p>Compara dos comunidades mediante el índice de Jaccard y analiza la similitud entre localidades.</p>
+        <a class="boton" href="https://jleichtle-prof.github.io/simulador-jaccard/">Ingresar</a>
+    </div>
+     
+    <div class="tarjeta">
+        <h2>🌎 Riqueza alfa, beta y gamma</h2>
+        <p>Analiza la riqueza de especies a nivel local y regional utilizando diversidad alfa, gamma y beta de Whittaker.</p>
+        <a class="boton" href="https://jleichtle-prof.github.io/riqueza-alfa-beta-gamma/">Ingresar</a>
+    </div>
 
-<div class="tarjeta">
-
-<h2>🦊 Diversidad alfa (local)</h2>
-
-<p>
-Explora cómo cambian los índices de Shannon y Simpson al modificar la abundancia de las especies.
-</p>
-
-<a class="boton"
-href="https://jleichtle-prof.github.io/laboratorio-diversidad/">
-Ingresar
-</a>
-
+    <div class="tarjeta">
+        <h2>📷 Cámaras Trampa</h2>
+        <p>Simula muestreos de fauna con detectabilidad imperfecta y evalúa curvas de acumulación e índices ecológicos.</p>
+        <a class="boton" href="https://jleichtle-prof.github.io/simulador-camaras-trampa/">Ingresar</a>
+    </div>
+ 
 </div>
-
-<div class="tarjeta">
-
-<h2>🔄 Diversidad beta</h2>
-
-<p>
-Compara dos comunidades mediante el índice de Jaccard y analiza la similitud entre localidades.
-</p>
-
-<a class="boton"
-href="https://jleichtle-prof.github.io/simulador-jaccard/">
-Ingresar
-</a>
-
-</div>
-
-<div class="tarjeta">
-
-<h2>🌎 Riqueza alfa, beta y gamma</h2>
-
-<p>
-Analiza la riqueza de especies a nivel local y regional utilizando diversidad alfa, gamma y beta de Whittaker.
-</p>
-
-<a class="boton"
-href="https://jleichtle-prof.github.io/riqueza-alfa-beta-gamma/">
-Ingresar
-</a>
-
-</div>
-
-</div>
-
+ 
 <footer>
-
-Desarrollado por Jorge Leichtle © 2026
-
+    Desarrollado por Jorge Leichtle © 2026
 </footer>
-
+ 
 </body>
 </html>
