@@ -1,7 +1,221 @@
-¿Qué es este proyecto?
-El Simulador de Monitoreo de Fauna Silvestre es una plataforma educativa interactiva desarrollada para apoyar la enseñanza de la ecología, la conservación de la biodiversidad y el manejo de fauna silvestre en estudiantes universitarios. Su objetivo es facilitar la comprensión de conceptos fundamentales relacionados con la diversidad biológica mediante la exploración práctica de datos simulados y la visualización inmediata de resultados.
-La plataforma fue desarrollada utilizando tecnologías web (HTML, CSS y JavaScript) y se encuentra disponible a través de GitHub Pages, permitiendo su acceso libre desde cualquier navegador sin necesidad de instalar software adicional. Todos los simuladores implementan las fórmulas originales de los principales índices ecológicos utilizados en investigación, monitoreo y gestión de la biodiversidad, reproduciendo de manera simplificada los procedimientos empleados en estudios científicos.
-El laboratorio virtual permite a los usuarios manipular la composición y abundancia de especies, modificar el esfuerzo de muestreo y explorar distintos escenarios ecológicos para analizar cómo varían diversos indicadores de biodiversidad. Entre ellos se incluyen la diversidad alfa, beta y gamma, así como métricas ampliamente utilizadas en ecología de comunidades, tales como el índice de Shannon-Wiener, el índice de Simpson, la riqueza específica, la equidad de Pielou, el índice de Jaccard y otros indicadores incorporados progresivamente al proyecto. Asimismo, integra simulaciones de monitoreo mediante cámaras trampa, permitiendo comprender el efecto de la detectabilidad imperfecta, el esfuerzo de muestreo y las tasas de captura sobre la riqueza observada.
-A través de estos simuladores interactivos, los estudiantes pueden comprender de manera intuitiva la relación entre los datos de campo y los indicadores ecológicos, fortaleciendo su capacidad para interpretar patrones de biodiversidad a distintas escalas espaciales. De este modo, la plataforma contribuye al desarrollo de competencias analíticas necesarias para el monitoreo de ecosistemas, la evaluación de cambios ambientales y la toma de decisiones orientadas a la conservación de la biodiversidad.
-Más que una colección de calculadoras, el proyecto constituye un laboratorio virtual de aprendizaje, donde los usuarios pueden experimentar, formular hipótesis y observar cómo pequeñas modificaciones en los datos producen cambios en los indicadores ecológicos. Este enfoque favorece el aprendizaje activo y permite transformar conceptos tradicionalmente abordados de forma teórica en experiencias visuales e interactivas, promoviendo una comprensión más profunda de la biodiversidad y de las herramientas empleadas para su estudio, monitoreo y gestión.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué es este proyecto?</title>
 
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg,#eef6ee,#f7faf7);
+    margin:0;
+    padding:0;
+    color:#1a1a1a;
+}
+
+header{
+    text-align:center;
+    padding:45px 20px;
+    background:#f3f8f3;
+    border-bottom:1px solid #d8e7d8;
+}
+
+h1{
+    color:#1b6e2b;
+    font-size:46px;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    font-size:22px;
+    color:#444;
+    max-width:900px;
+    margin:auto;
+    line-height:1.5;
+}
+
+.contenedor{
+    max-width:1000px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    border-left:10px solid #2e7d32;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    font-size:19px;
+    line-height:1.7;
+    color:#333;
+}
+
+.card p{
+    margin-bottom:22px;
+}
+
+.card strong{
+    color:#1b6e2b;
+}
+
+.botones{
+    display:flex;
+    justify-content:center;
+    margin-top:35px;
+    margin-bottom:15px;
+}
+
+.btn-menu{
+    display:inline-block;
+    text-decoration:none;
+    border-radius:24px;
+    padding:12px 24px;
+    background:#2e7d32;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-menu:hover{
+    background:#1b5e20;
+    transform:translateY(-2px);
+}
+
+footer{
+    text-align:center;
+    margin-top:50px;
+    padding:25px;
+    color:#666;
+    border-top:1px solid #ddd;
+    font-size:16px;
+    line-height:1.8;
+}
+
+footer p{
+    margin:6px 0;
+}
+
+footer a{
+    color:#1565c0;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+.version{
+    font-size:14px;
+    color:#888;
+}
+
+@media(max-width:800px){
+    h1{
+        font-size:34px;
+    }
+
+    .subtitulo{
+        font-size:19px;
+    }
+
+    .card{
+        font-size:17px;
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>📖 ¿Qué es este proyecto?</h1>
+
+<div class="subtitulo">
+Laboratorio virtual para la enseñanza de la biodiversidad, el monitoreo ecológico y el manejo de fauna silvestre.
+</div>
+
+</header>
+
+<div class="contenedor">
+
+<div class="card">
+
+<p>
+El <strong>Simulador de Monitoreo de Fauna Silvestre</strong> es una plataforma educativa interactiva desarrollada para apoyar la enseñanza de la ecología, la conservación de la biodiversidad y el manejo de fauna silvestre en estudiantes universitarios. Su objetivo es facilitar la comprensión de conceptos fundamentales relacionados con la diversidad biológica mediante la exploración práctica de datos simulados y la visualización inmediata de resultados.
+</p>
+
+<p>
+La plataforma fue desarrollada utilizando tecnologías web como <strong>HTML, CSS y JavaScript</strong>, y se encuentra disponible a través de <strong>GitHub Pages</strong>, permitiendo su acceso libre desde cualquier navegador sin necesidad de instalar software adicional.
+</p>
+
+<p>
+Todos los simuladores implementan fórmulas originales de los principales índices ecológicos utilizados en investigación, monitoreo y gestión de la biodiversidad, reproduciendo de manera simplificada los procedimientos empleados en estudios científicos.
+</p>
+
+<p>
+El laboratorio virtual permite a los usuarios manipular la composición y abundancia de especies, modificar el esfuerzo de muestreo y explorar distintos escenarios ecológicos para analizar cómo varían diversos indicadores de biodiversidad.
+</p>
+
+<p>
+Entre estos indicadores se incluyen la diversidad <strong>alfa, beta y gamma</strong>, así como métricas ampliamente utilizadas en ecología de comunidades, tales como el <strong>índice de Shannon-Wiener</strong>, el <strong>índice de Simpson</strong>, la <strong>riqueza específica</strong>, la <strong>equidad de Pielou</strong>, el <strong>índice de Jaccard</strong> y otros indicadores incorporados progresivamente al proyecto.
+</p>
+
+<p>
+Asimismo, la plataforma integra simulaciones de monitoreo mediante <strong>cámaras trampa</strong>, permitiendo comprender el efecto de la detectabilidad imperfecta, el esfuerzo de muestreo y las tasas de captura sobre la riqueza observada.
+</p>
+
+<p>
+A través de estos simuladores interactivos, los estudiantes pueden comprender de manera intuitiva la relación entre los datos de campo y los indicadores ecológicos, fortaleciendo su capacidad para interpretar patrones de biodiversidad a distintas escalas espaciales.
+</p>
+
+<p>
+De este modo, la plataforma contribuye al desarrollo de competencias analíticas necesarias para el monitoreo de ecosistemas, la evaluación de cambios ambientales y la toma de decisiones orientadas a la conservación de la biodiversidad.
+</p>
+
+<p>
+Más que una colección de calculadoras, el proyecto constituye un <strong>laboratorio virtual de aprendizaje</strong>, donde los usuarios pueden experimentar, formular hipótesis y observar cómo pequeñas modificaciones en los datos producen cambios en los indicadores ecológicos.
+</p>
+
+<p>
+Este enfoque favorece el aprendizaje activo y permite transformar conceptos tradicionalmente abordados de forma teórica en experiencias visuales e interactivas, promoviendo una comprensión más profunda de la biodiversidad y de las herramientas empleadas para su estudio, monitoreo y gestión.
+</p>
+
+</div>
+
+<div class="botones">
+
+<a class="btn-menu" href="https://jleichtle-prof.github.io/laboratorio-fauna-silvestre/">
+🏠 Menú principal
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Desarrollado por <strong>Jorge Leichtle</strong> © 2026
+</p>
+
+<p>
+📧 Contacto:
+<a href="mailto:jleichtle@docente.ubo.cl">
+jleichtle@docente.ubo.cl
+</a>
+</p>
+
+<p class="version">
+Versión 1.0 • Última actualización: junio de 2026
+</p>
+
+</footer>
+
+</body>
+</html>
