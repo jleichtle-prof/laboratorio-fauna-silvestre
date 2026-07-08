@@ -69,6 +69,25 @@ h2{
     margin:18px 0;
 }
 
+.fraccion{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    vertical-align:middle;
+    margin-left:8px;
+    font-size:24px;
+    line-height:1.2;
+}
+
+.arriba{
+    border-bottom:2px solid #1565c0;
+    padding:0 12px 5px 12px;
+}
+
+.abajo{
+    padding-top:5px;
+}
+
 .card p{
     font-size:17px;
     line-height:1.6;
@@ -202,15 +221,15 @@ Esta sección presenta los principales índices ecológicos utilizados en los si
 <h3>Índice de Shannon-Wiener H'</h3>
 
 <p>
-El índice de Shannon-Wiener mide la diversidad de una comunidad considerando tanto la riqueza de especies como la distribución relativa de los individuos entre ellas.
+El índice de Shannon o Shannon-Wiener mide la diversidad de una comunidad considerando tanto la riqueza de especies como la distribución relativa de los individuos entre ellas.
 </p>
 
 <div class="formula">
-H' = - Σ pi · ln(pi)
+H' = - Σ p<sub>i</sub> · ln(p<sub>i</sub>)
 </div>
 
 <p>
-Donde <strong>pi</strong> corresponde a la proporción de individuos de la especie <em>i</em> respecto del total de individuos registrados.
+Donde <strong>p<sub>i</sub></strong> corresponde a la proporción de individuos de la especie <em>i</em> respecto del total de individuos registrados.
 </p>
 
 <div class="interpretacion">
@@ -227,16 +246,21 @@ En este laboratorio se utiliza el índice de Simpson como medida de dominancia. 
 </p>
 
 <div class="formula">
-D = Σ pi²
+D = Σ
+<span class="fraccion">
+<span class="arriba">n<sub>i</sub>(n<sub>i</sub> − 1)</span>
+<span class="abajo">N(N − 1)</span>
+</span>
 </div>
 
 <p>
-Donde <strong>pi</strong> corresponde a la abundancia relativa de cada especie dentro de la comunidad.
+Donde <strong>n<sub>i</sub></strong> corresponde al número de individuos de la especie <em>i</em>, mientras que <strong>N</strong> corresponde al número total de individuos registrados en la comunidad.
 </p>
 
 <div class="interpretacion">
 <strong>Interpretación:</strong><br>
-Valores cercanos a 0 indican baja dominancia y mayor equidad. Valores cercanos a 1 indican alta dominancia, es decir, una o pocas especies concentran gran parte de los individuos.
+Valores cercanos a 0 indican baja dominancia y una distribución relativamente equitativa de los individuos entre las especies. Valores cercanos a 1 indican alta dominancia, es decir, una o pocas especies concentran gran parte de los individuos registrados.<br><br>
+<em>Nota:</em> existen distintas formulaciones matemáticamente equivalentes del índice de Simpson. En este laboratorio se presenta la formulación clásica basada en el número de individuos de cada especie.
 </div>
 </div>
 
