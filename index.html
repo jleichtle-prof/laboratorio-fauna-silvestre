@@ -36,28 +36,41 @@ h1{
     line-height:1.5;
 }
 
-.boton-proyecto{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 32px;
-    background:#2e7d32;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-size:19px;
-    font-weight:bold;
+.introduccion{
+    max-width:900px;
+    margin:30px auto 0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.intro-card{
+    background:white;
+    border:6px solid #2e7d32;
+    border-radius:28px;
+    padding:24px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
     transition:all .3s;
 }
 
-.boton-proyecto:hover{
-    background:#1b5e20;
-    transform:translateY(-2px);
+.intro-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 22px rgba(0,0,0,.18);
 }
 
-.descripcion-proyecto{
-    margin-top:15px;
+.intro-card h3{
+    color:#1b6e2b;
+    font-size:26px;
+    margin-top:0;
+    margin-bottom:12px;
+}
+
+.intro-card p{
     color:#555;
-    font-size:16px;
+    font-size:17px;
+    line-height:1.5;
+    margin-bottom:20px;
 }
 
 .contenedor-general{
@@ -141,7 +154,7 @@ h1{
 
 .boton{
     display:inline-block;
-    margin-top:25px;
+    margin-top:20px;
     padding:14px 28px;
     background:#1565c0;
     color:white;
@@ -166,6 +179,7 @@ footer{
 
 @media(max-width:1000px){
 
+    .introduccion,
     .contenedor.indices,
     .contenedor.monitoreo{
         grid-template-columns:1fr;
@@ -201,20 +215,36 @@ footer{
 Laboratorio virtual para la enseñanza de la biodiversidad, el monitoreo ecológico y el manejo de fauna silvestre.
 </div>
 
-<a class="boton-proyecto" href="proyecto.html">
-📖 ¿Qué es este proyecto?
+<div class="introduccion">
+
+<div class="intro-card">
+
+<h3>📖 ¿Qué es este proyecto?</h3>
+
+<p>
+Conozca los objetivos, aplicaciones y alcance del Laboratorio Virtual de Monitoreo de Fauna Silvestre.
+</p>
+
+<a class="boton" href="proyecto.html">
+Ingresar
 </a>
 
-<div class="descripcion-proyecto">
-Conozca los objetivos, fundamentos científicos y aplicaciones docentes del laboratorio virtual.
 </div>
 
-<a class="boton-proyecto" href="fundamentos.html">
-📚 Fundamentos científicos
+<div class="intro-card">
+
+<h3>📚 Fundamentos científicos</h3>
+
+<p>
+Consulte las fórmulas, conceptos ecológicos, glosario y referencias bibliográficas utilizadas por los simuladores.
+</p>
+
+<a class="boton" href="fundamentos.html">
+Ingresar
 </a>
 
-<div class="descripcion-proyecto">
-Consulte las fórmulas, conceptos ecológicos, glosario y referencias bibliográficas que sustentan los simuladores del laboratorio.
+</div>
+
 </div>
     
 </header>
