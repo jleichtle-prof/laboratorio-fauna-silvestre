@@ -60,17 +60,55 @@ h1{
     font-size:16px;
 }
 
-.contenedor{
-    max-width:1300px;
+.contenedor-general{
+    max-width:1350px;
     margin:auto;
-    padding:50px 20px;
+    padding:45px 20px;
+}
+
+.seccion{
+    background:#ffffff;
+    border-top:8px solid #2e7d32;
+    border-radius:24px;
+    padding:35px;
+    margin-bottom:40px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.seccion h2{
+    text-align:center;
+    color:#1b6e2b;
+    font-size:34px;
+    margin-top:0;
+    margin-bottom:10px;
+}
+
+.descripcion-seccion{
+    text-align:center;
+    color:#555;
+    font-size:18px;
+    max-width:850px;
+    margin:0 auto 30px auto;
+    line-height:1.5;
+}
+
+.contenedor{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
 }
 
-.tarjeta{
+.contenedor.indices{
+    grid-template-columns:repeat(3,1fr);
+}
 
+.contenedor.monitoreo{
+    grid-template-columns:repeat(2,1fr);
+    max-width:900px;
+    margin:auto;
+}
+
+.tarjeta{
     background:white;
     border:8px solid #2e7d32;
     border-radius:35px;
@@ -78,39 +116,30 @@ h1{
     text-align:center;
     box-shadow:0 6px 18px rgba(0,0,0,.15);
     transition:all .3s;
-
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-
 }
 
 .tarjeta:hover{
-
     transform:translateY(-8px);
     box-shadow:0 10px 25px rgba(0,0,0,.25);
-
 }
 
-.tarjeta h2{
-
+.tarjeta h3{
     color:#2e7d32;
     font-size:30px;
     margin-bottom:20px;
-
 }
 
 .tarjeta p{
-
     font-size:19px;
     line-height:1.5;
     color:#444;
     flex-grow:1;
-
 }
 
 .boton{
-
     display:inline-block;
     margin-top:25px;
     padding:14px 28px;
@@ -120,29 +149,25 @@ h1{
     border-radius:30px;
     font-size:20px;
     font-weight:bold;
-
 }
 
 .boton:hover{
-
     background:#0d47a1;
-
 }
 
 footer{
-
     text-align:center;
     margin-top:50px;
     padding:30px;
     color:#666;
     border-top:1px solid #ddd;
     font-size:15px;
-
 }
 
 @media(max-width:1000px){
 
-    .contenedor{
+    .contenedor.indices,
+    .contenedor.monitoreo{
         grid-template-columns:1fr;
     }
 
@@ -154,6 +179,13 @@ footer{
         font-size:20px;
     }
 
+    .seccion{
+        padding:25px;
+    }
+
+    .seccion h2{
+        font-size:28px;
+    }
 }
 
 </style>
@@ -166,142 +198,132 @@ footer{
 <h1>🐾 Simulador de monitoreo de fauna silvestre</h1>
 
 <div class="subtitulo">
-
 Laboratorio virtual para la enseñanza de la biodiversidad, el monitoreo ecológico y el manejo de fauna silvestre.
-
 </div>
 
 <a class="boton-proyecto" href="proyecto.html">
-
 📖 ¿Qué es este proyecto?
-
 </a>
 
 <div class="descripcion-proyecto">
-
 Conozca los objetivos, fundamentos científicos y aplicaciones docentes del laboratorio virtual.
-
 </div>
 
 <a class="boton-proyecto" href="fundamentos.html">
-
 📚 Fundamentos científicos
-
 </a>
 
 <div class="descripcion-proyecto">
-
 Consulte las fórmulas, conceptos ecológicos, glosario y referencias bibliográficas que sustentan los simuladores del laboratorio.
-
 </div>
     
 </header>
 
-<div class="contenedor">
+<div class="contenedor-general">
+
+<section class="seccion">
+
+<h2>📊 Simuladores de cálculo para índices de diversidad</h2>
+
+<div class="descripcion-seccion">
+Herramientas interactivas para explorar índices ecológicos, riqueza específica, diversidad alfa, beta y gamma.
+</div>
+
+<div class="contenedor indices">
 
 <div class="tarjeta">
 
-<h2>🦊 Diversidad alfa (local)</h2>
+<h3>🦊 Diversidad alfa (local)</h3>
 
 <p>
-
 Explora cómo cambian los índices de Shannon, Simpson y otros indicadores al modificar la abundancia de las especies.
-
 </p>
 
-<a class="boton"
-href="https://jleichtle-prof.github.io/laboratorio-diversidad/">
-
+<a class="boton" href="https://jleichtle-prof.github.io/laboratorio-diversidad/">
 Ingresar
-
 </a>
 
 </div>
 
 <div class="tarjeta">
 
-<h2>🔄 Diversidad beta</h2>
+<h3>🔄 Diversidad beta</h3>
 
 <p>
-
 Compara dos comunidades mediante el índice de Jaccard y analiza la similitud entre localidades.
-
 </p>
 
-<a class="boton"
-href="https://jleichtle-prof.github.io/simulador-jaccard/">
-
+<a class="boton" href="https://jleichtle-prof.github.io/simulador-jaccard/">
 Ingresar
-
 </a>
 
 </div>
 
 <div class="tarjeta">
 
-<h2>🌎 Riqueza alfa, beta y gamma</h2>
+<h3>🌎 Riqueza alfa, beta y gamma</h3>
 
 <p>
-
 Analiza la riqueza de especies a distintas escalas espaciales utilizando diversidad alfa, beta de Whittaker y gamma.
-
 </p>
 
-<a class="boton"
-href="https://jleichtle-prof.github.io/riqueza-alfa-beta-gamma/">
-
+<a class="boton" href="https://jleichtle-prof.github.io/riqueza-alfa-beta-gamma/">
 Ingresar
-
 </a>
 
 </div>
 
+</div>
+
+</section>
+
+<section class="seccion">
+
+<h2>📍 Simuladores de monitoreo</h2>
+
+<div class="descripcion-seccion">
+Herramientas para simular métodos de muestreo, esfuerzo de monitoreo, detectabilidad, riqueza observada y densidad.
+</div>
+
+<div class="contenedor monitoreo">
+
 <div class="tarjeta">
 
-<h2>📷 Cámaras trampa</h2>
+<h3>📷 Cámaras trampa</h3>
 
 <p>
-
 Simula monitoreos de fauna mediante cámaras trampa y explora conceptos como detectabilidad imperfecta, esfuerzo de muestreo y curvas de acumulación de especies.
-
 </p>
 
-<a class="boton"
-href="https://jleichtle-prof.github.io/simulador-camaras-trampa/">
-
+<a class="boton" href="https://jleichtle-prof.github.io/simulador-camaras-trampa/">
 Ingresar
-
 </a>
 
 </div>
 
 <div class="tarjeta">
 
-<h2>🚶 Transectos lineales</h2>
+<h3>🚶 Transectos lineales</h3>
 
 <p>
-
-Simula monitoreos de fauna mediante transectos lineales de ancho fijo y analiza cómo la longitud del transecto, el ancho de muestreo y el esfuerzo de muestreo influyen sobre la riqueza observada, la densidad y los índices de diversidad.
-
+Simula monitoreos de fauna mediante transectos lineales de ancho fijo y analiza cómo la longitud del transecto, el ancho de muestreo y el esfuerzo influyen sobre la riqueza observada, la densidad y los índices de diversidad.
 </p>
 
-<a class="boton"
-href="https://jleichtle-prof.github.io/simulador-transectos/">
-
+<a class="boton" href="https://jleichtle-prof.github.io/simulador-transectos/">
 Ingresar
-
 </a>
 
 </div>
+
+</div>
+
+</section>
 
 </div>
 
 <footer>
-
 Desarrollado por Jorge Leichtle © 2026
-
 </footer>
 
 </body>
 </html>
-
