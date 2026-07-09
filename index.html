@@ -116,8 +116,8 @@ h1{
 }
 
 .contenedor.monitoreo{
-    grid-template-columns:repeat(2,1fr);
-    max-width:900px;
+    grid-template-columns:repeat(3,1fr);
+    max-width:1200px;
     margin:auto;
 }
 
@@ -134,74 +134,20 @@ h1{
     justify-content:space-between;
 }
 
-.tarjeta:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.tarjeta h3{
-    color:#2e7d32;
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-.tarjeta p{
-    font-size:19px;
-    line-height:1.5;
-    color:#444;
-    flex-grow:1;
-}
-
-.boton{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 28px;
-    background:#1565c0;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.boton:hover{
-    background:#0d47a1;
-}
-
-footer{
-    text-align:center;
-    margin-top:50px;
-    padding:30px;
-    color:#666;
-    border-top:1px solid #ddd;
-    font-size:15px;
-}
+.tarjeta:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(0,0,0,.25);}
+.tarjeta h3{color:#2e7d32;font-size:30px;margin-bottom:20px;}
+.tarjeta p{font-size:19px;line-height:1.5;color:#444;flex-grow:1;}
+.boton{display:inline-block;margin-top:20px;padding:14px 28px;background:#1565c0;color:white;text-decoration:none;border-radius:30px;font-size:20px;font-weight:bold;}
+.boton:hover{background:#0d47a1;}
+footer{text-align:center;margin-top:50px;padding:30px;color:#666;border-top:1px solid #ddd;font-size:15px;}
 
 @media(max-width:1000px){
-
-    .introduccion,
-    .contenedor.indices,
-    .contenedor.monitoreo{
-        grid-template-columns:1fr;
-    }
-
-    h1{
-        font-size:36px;
-    }
-
-    .subtitulo{
-        font-size:20px;
-    }
-
-    .seccion{
-        padding:25px;
-    }
-
-    .seccion h2{
-        font-size:28px;
-    }
+.introduccion,.contenedor.indices,.contenedor.monitoreo{grid-template-columns:1fr;}
+h1{font-size:36px;}
+.subtitulo{font-size:20px;}
+.seccion{padding:25px;}
+.seccion h2{font-size:28px;}
 }
-
 </style>
 </head>
 
@@ -218,93 +164,30 @@ Laboratorio virtual para la enseñanza de la biodiversidad, el monitoreo ecológ
 <div class="introduccion">
 
 <div class="intro-card">
-
 <h3>📖 ¿Qué es este proyecto?</h3>
-
-<p>
-Conozca los objetivos, aplicaciones y alcance del Laboratorio Virtual de Monitoreo de Fauna Silvestre.
-</p>
-
-<a class="boton" href="proyecto.html">
-Ingresar
-</a>
-
+<p>Conozca los objetivos, aplicaciones y alcance del Laboratorio Virtual de Monitoreo de Fauna Silvestre.</p>
+<a class="boton" href="proyecto.html">Ingresar</a>
 </div>
 
 <div class="intro-card">
-
 <h3>📚 Fundamentos científicos</h3>
-
-<p>
-Consulte las fórmulas, conceptos ecológicos, glosario y referencias bibliográficas utilizadas por los simuladores.
-</p>
-
-<a class="boton" href="fundamentos.html">
-Ingresar
-</a>
-
+<p>Consulte las fórmulas, conceptos ecológicos, glosario y referencias bibliográficas utilizadas por los simuladores.</p>
+<a class="boton" href="fundamentos.html">Ingresar</a>
 </div>
 
 </div>
-    
 </header>
 
 <div class="contenedor-general">
 
 <section class="seccion">
-
 <h2>📊 Simuladores de cálculo para índices de diversidad</h2>
-
 <div class="descripcion-seccion">
 Herramientas interactivas para explorar índices ecológicos, riqueza específica, diversidad alfa, beta y gamma.
 </div>
-
 <div class="contenedor indices">
-
-<div class="tarjeta">
-
-<h3>🦊 Diversidad alfa</h3>
-
-<p>
-Explora cómo cambian los índices de Shannon, Simpson y otros indicadores al modificar la abundancia de las especies.
-</p>
-
-<a class="boton" href="https://jleichtle-prof.github.io/laboratorio-diversidad/">
-Ingresar
-</a>
-
+...
 </div>
-
-<div class="tarjeta">
-
-<h3>🔄 Diversidad beta</h3>
-
-<p>
-Compara dos comunidades mediante el índice de Jaccard y analiza la similitud entre localidades.
-</p>
-
-<a class="boton" href="https://jleichtle-prof.github.io/simulador-jaccard/">
-Ingresar
-</a>
-
-</div>
-
-<div class="tarjeta">
-
-<h3>🌎 Riqueza alfa, beta y gamma</h3>
-
-<p>
-Analiza la riqueza de especies a distintas escalas espaciales utilizando diversidad alfa, beta de Whittaker y gamma.
-</p>
-
-<a class="boton" href="https://jleichtle-prof.github.io/riqueza-alfa-beta-gamma/">
-Ingresar
-</a>
-
-</div>
-
-</div>
-
 </section>
 
 <section class="seccion">
@@ -318,35 +201,24 @@ Herramientas para simular métodos de muestreo, esfuerzo de monitoreo, detectabi
 <div class="contenedor monitoreo">
 
 <div class="tarjeta">
-
 <h3>📷 Cámaras trampa</h3>
-
-<p>
-Simula monitoreos de fauna mediante cámaras trampa y explora conceptos como detectabilidad imperfecta, esfuerzo de muestreo y curvas de acumulación de especies.
-</p>
-
-<a class="boton" href="https://jleichtle-prof.github.io/simulador-camaras-trampa/">
-Ingresar
-</a>
-
+<p>Simula monitoreos de fauna mediante cámaras trampa y explora conceptos como detectabilidad imperfecta, esfuerzo de muestreo y curvas de acumulación de especies.</p>
+<a class="boton" href="https://jleichtle-prof.github.io/simulador-camaras-trampa/">Ingresar</a>
 </div>
 
 <div class="tarjeta">
-
 <h3>🚶 Transectos lineales</h3>
+<p>Simula monitoreos de fauna mediante transectos lineales de ancho fijo y analiza cómo la longitud del transecto, el ancho de muestreo y el esfuerzo influyen sobre la riqueza observada, la densidad y los índices de diversidad.</p>
+<a class="boton" href="https://jleichtle-prof.github.io/simulador-transectos/">Ingresar</a>
+</div>
 
-<p>
-Simula monitoreos de fauna mediante transectos lineales de ancho fijo y analiza cómo la longitud del transecto, el ancho de muestreo y el esfuerzo influyen sobre la riqueza observada, la densidad y los índices de diversidad.
-</p>
-
-<a class="boton" href="https://jleichtle-prof.github.io/simulador-transectos/">
-Ingresar
-</a>
-
+<div class="tarjeta">
+<h3>🐭 Captura de micromamíferos</h3>
+<p>Simula una campaña de captura de micromamíferos mediante una grilla de trampas Sherman y analiza el esfuerzo de muestreo, capturas, recapturas, riqueza observada e índices de diversidad.</p>
+<a class="boton" href="https://jleichtle-prof.github.io/simulador-micromamiferos/">Ingresar</a>
 </div>
 
 </div>
-
 </section>
 
 </div>
@@ -357,3 +229,4 @@ Desarrollado por Jorge Leichtle © 2026
 
 </body>
 </html>
+
